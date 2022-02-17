@@ -1,0 +1,49 @@
+[18:28:55.570] Global cache location 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3', safe file path 'c:/users/bruno/appdata/roaming/npm/node_modules/typescript/lib/typingsafelist.json', types map path c:/users/bruno/appdata/roaming/npm/node_modules/typescript/lib/typesmap.json
+[18:28:55.571] Processing cache location 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3'
+[18:28:55.572] Trying to find 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/package.json'...
+[18:28:55.574] Loaded content of 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.580"},"devDependencies":{"@types/history":"^4.7.9","@types/notify":"0.0.31","@types/react":"^17.0.33","@types/react-router":"^5.1.17","@types/react-router-dom":"^5.3.2"}}
+[18:28:55.575] Loaded content of 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/package-lock.json'
+[18:28:55.594] Adding entry into typings cache: 'history' => 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/history/index.d.ts'
+[18:28:55.600] Adding entry into typings cache: 'notify' => 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/notify/index.d.ts'
+[18:28:55.607] Adding entry into typings cache: 'react' => 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/react/index.d.ts'
+[18:28:55.614] Adding entry into typings cache: 'react-router' => 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/react-router/index.d.ts'
+[18:28:55.617] Adding entry into typings cache: 'react-router-dom' => 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/react-router-dom/index.d.ts'
+[18:28:55.617] Finished processing cache location 'C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3'
+[18:28:55.618] Process id: 4980
+[18:28:55.618] NPM location: "C:\Program Files\nodejs\npm" (explicit '--npmLocation' not  provided)
+[18:28:55.618] validateDefaultNpmLocation: false
+[18:28:55.618] Npm config file: C:/Users/Bruno/AppData/Local/Microsoft/TypeScript/4.3/package.json
+[18:28:55.618] Updating types-registry npm package...
+[18:28:55.619] Exec: "C:\Program Files\nodejs\npm" install --ignore-scripts types-registry@latest
+[18:28:57.968]     Succeeded. stdout:
+    + types-registry@0.1.580
+    updated 1 package and audited 11 packages in 1.124s
+found 0 vulnerabilities
+
+
+[18:28:57.968] Updated types-registry npm package
+[18:28:57.991] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es5.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.dom.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.full.d.ts","d:/phonespeak/phonespeak.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"d:/phonespeak","kind":"discover"}
+[18:28:58.005] Loaded safelist from types map file 'c:/users/bruno/appdata/roaming/npm/node_modules/typescript/lib/typesmap.json'
+[18:28:58.006] Explicitly included types: []
+[18:28:58.007] Inferred typings from unresolved imports: []
+[18:28:58.007] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["d:/phonespeak/bower_components","d:/phonespeak/node_modules"]}
+[18:28:58.008] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["d:/phonespeak/bower_components","d:/phonespeak/node_modules"]}
+[18:28:58.008] DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/bower_components
+[18:28:58.008] DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:28:58.009] Elapsed:: 1.027400016784668ms DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:28:58.010] DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/node_modules
+[18:28:58.010] DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:28:58.010] Elapsed:: 0.09259998798370361ms DirectoryWatcher:: Added:: WatchInfo: d:/phonespeak/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:28:58.010] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[18:28:58.010] Response has been sent.
+[18:28:58.011] No new typings were requested as a result of typings discovery
+[18:29:15.600] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es5.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.dom.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.dom.iterable.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.scripthost.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts","c:/Users/Bruno/AppData/Roaming/npm/node_modules/typescript/lib/lib.es2016.full.d.ts","d:/phonespeak/phonespeak.user.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"d:/phonespeak","kind":"discover"}
+[18:29:15.600] Explicitly included types: []
+[18:29:15.601] Inferred typings from unresolved imports: []
+[18:29:15.601] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["d:/phonespeak/bower_components","d:/phonespeak/node_modules"]}
+[18:29:15.601] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["d:/phonespeak/bower_components","d:/phonespeak/node_modules"]}
+[18:29:15.601] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[18:29:15.601] Response has been sent.
+[18:29:15.601] No new typings were requested as a result of typings discovery

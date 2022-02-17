@@ -1,33 +1,47 @@
-const mapping = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
+// ==UserScript==
+// @name         Phonespeak
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Extension to translate phonespeak
+// @author       You
+// @match        *://www.facebook.com/*
+// @icon         https://www.google.com/s2/favicons?domain=facebook.com
+// @grant        none
+// ==/UserScript==
 
-const findInMapping = (letter, offset = 2) =>
-  mapping.findIndex(pair => pair.includes(letter)) + offset;
+(function() {
+  'use strict';
 
-const isPhoneSpeak = (comment) => /(\d\.)+/g.test(comment);
+  const mapping = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
 
-const phoneIcon = `${String.fromCodePoint(0x0001F4DE)} `;
+  const findInMapping = (letter, offset = 2) =>
+    mapping.findIndex(pair => pair.includes(letter)) + offset;
 
-const translate = (seq, offset = 2) => seq
-  .trim()
-  .split('.')
-  .map(pair => {
-    const digit = pair[0];
+  const isPhoneSpeak = (comment) => /(\d\.)+/g.test(comment);
 
-    if (isNaN(digit)) return /[a-z]/i.test(digit) ? findInMapping(digit) : digit;
+  const phoneIcon = `${String.fromCodePoint(0x0001F4DE)} `;
 
-    const num = parseInt(digit);
-    if (num === 0) return ' ';
+  const translate = (seq, offset = 2) => seq
+    .trim()
+    .split('.')
+    .map(pair => {
+      const digit = pair[0];
 
-    const keymap = mapping[num - offset];
-    if (!keymap) return pair;
+      if (isNaN(digit)) return /[a-z]/i.test(digit) ? findInMapping(digit) : digit;
 
-    return keymap[pair.length - 1];
-  })
-  .join('');
+      const num = parseInt(digit);
+      if (num === 0) return ' ';
+
+      const keymap = mapping[num - offset];
+      if (!keymap) return pair;
+
+      return keymap[pair.length - 1];
+    })
+    .join('');
 
 
-const injectStyle = () => {
-  const css = `
+  const injectStyle = () => {
+    const css = `
     <style>
       [original-comment] {
           color: #ffdad3;
@@ -43,41 +57,44 @@ const injectStyle = () => {
     </style>
   `;
 
-  document.body.insertAdjacentHTML('beforebegin', css);
-};
+    document.body.insertAdjacentHTML('beforebegin', css);
+  };
 
-const replaceComments = () => {
-  const comments = Array.from(
-    document.querySelectorAll(
-      '[aria-label^=Comment] span div[dir=auto],' +
-      '[aria-label^=Reply] span div[dir=auto]'
-    )
-  );
-
-  comments
-    .filter(({ innerText: comment }) => isPhoneSpeak(comment))
-    .forEach(comment => {
-      comment.setAttribute('original-comment', comment.innerText);
-
-      comment.innerText = phoneIcon + translate(comment.innerText);
-    });
-};
-
-
-onload = () => {
-  setTimeout(() => {
-    injectStyle();
-    replaceComments();
-
-    const observer = new MutationObserver((mutations, observer) => {
-      for (const mutation of mutations) {
-        if (mutation.type === 'childList') replaceComments();
-      }
-    });
-
-    observer.observe(
-      document.querySelector('.stjgntxs.ni8dbmo4.l82x9zwi.uo3d90p7.h905i5nu.monazrh9'),
-      { attributes: true, childList: true, subtree: true }
+  const replaceComments = () => {
+    const comments = Array.from(
+      document.querySelectorAll(
+        '[aria-label^=Comment] span div[dir=auto],' +
+        '[aria-label^=Reply] span div[dir=auto]'
+      )
     );
-  }, 1000);
-};
+
+    comments
+      .filter(({ innerText: comment }) => isPhoneSpeak(comment))
+      .forEach(comment => {
+        comment.setAttribute('original-comment', comment.innerText);
+
+        comment.innerText = phoneIcon + translate(comment.innerText);
+      });
+  };
+
+
+  onload = () => {
+    setTimeout(() => {
+      injectStyle();
+      replaceComments();
+
+      const observer = new MutationObserver((mutations, observer) => {
+        for (const mutation of mutations) {
+          if (mutation.type === 'childList') replaceComments();
+        }
+      });
+
+      observer.observe(
+        document.querySelector('.stjgntxs.ni8dbmo4.l82x9zwi.uo3d90p7.h905i5nu.monazrh9'),
+        { attributes: true, childList: true, subtree: true }
+      );
+    }, 1000);
+  };
+
+
+})();
