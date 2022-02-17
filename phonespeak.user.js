@@ -17,7 +17,7 @@
   const findInMapping = (letter, offset = 2) =>
     mapping.findIndex(pair => pair.includes(letter)) + offset;
 
-  const isPhoneSpeak = (comment) => /(\d\.)+/g.test(comment);
+  const isPhoneSpeak = (comment) => /(\d{1,3}\.)+/g.test(comment);
 
   const phoneIcon = `${String.fromCodePoint(0x0001F4DE)} `;
 
