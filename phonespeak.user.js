@@ -23,11 +23,16 @@
 
   const translate = (seq, offset = 2) => seq
     .trim()
-    .split('.')
+    .split(/\.|\s/)
     .map(pair => {
       const digit = pair[0];
 
-      if (isNaN(digit)) return /[a-z]/i.test(digit) ? findInMapping(digit) : digit;
+      if (isNaN(digit)) {
+        if (/[a-z]/i.test(digit)) {
+          return pair.length > 1 ? pair + ' ' : findInMapping(digit);
+        }
+        return digit;
+      }
 
       const num = parseInt(digit);
       if (num === 0) return ' ';
@@ -77,7 +82,6 @@
       });
   };
 
-
   onload = () => {
     setTimeout(() => {
       injectStyle();
@@ -95,6 +99,4 @@
       );
     }, 1000);
   };
-
-
 })();
